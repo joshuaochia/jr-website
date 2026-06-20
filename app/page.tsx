@@ -17,14 +17,31 @@ const portfolioSamples = [
   {
     src: "/assets/Quantity_takeoff/Quantity take off using Bluebeam and zztakeoff/4d6bc1e1-c915-475f-b848-4a11e420227e.jpeg",
     alt: "Bluebeam quantity takeoff sample",
-    title: "Bluebeam Takeoff",
-    caption: "Quantity takeoff and measurement visuals created with Bluebeam.",
+    title: "Quantity Takeoff & Cost Estimation (Bluebeam)",
+    caption: "Quantity takeoff and cost estimation using Bluebeam.",
   },
   {
     src: "/assets/Quantity_takeoff/Quantity take off using Bluebeam and zztakeoff/64caafd8-86a4-4099-9536-622a40ad3945.jpeg",
     alt: "Quantity takeoff worksheet and material lists",
-    title: "Quantity Takeoff",
-    caption: "Accurate material counts and measurement documentation.",
+    title: "Quantity Takeoff (zztakeoff)",
+    caption: "Quantity takeoff using zztakeoff.",
+  },
+];
+
+const experience = [
+  {
+    logo: "/assets/arki.j.jpg",
+    company: "Arki J",
+    role: "Site Engineer / Estimator",
+    detail:
+      "Supported site engineering oversight alongside cost estimating and quantity takeoff for construction projects.",
+  },
+  {
+    logo: "/assets/prodisenyo.jpg",
+    company: "Prodisenyo",
+    role: "Site Engineer / Estimator",
+    detail:
+      "Handled site engineering tasks together with project cost estimation and quantity takeoff deliverables.",
   },
 ];
 
@@ -256,38 +273,95 @@ export default function Home() {
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                icon: "📐",
+                logo: "/assets/AutoCad_new_logo.svg.png",
                 name: "AutoCAD",
                 detail: "Drafting and drawing review for accurate site plans.",
               },
               {
-                icon: "📑",
+                logo: "/assets/bluebeam-color-logo.png",
                 name: "Bluebeam",
                 detail: "PDF markup, takeoff, and quantity review.",
               },
               {
-                icon: "🧮",
+                logo: "/assets/zztakeoff-logo-black.svg",
                 name: "zztakeoff",
                 detail: "Detailed quantity takeoff and measurement capture.",
               },
               {
-                icon: "📊",
+                logo: "/assets/Microsoft-Excel-Symbol.png",
                 name: "Microsoft Excel",
                 detail: "Cost sheets, pricing tables, and estimate totals.",
+              },
+              {
+                logo: "/assets/SketchUp-logo.png",
+                name: "SketchUp",
+                detail: "3D modeling for visualizing project scope and layout.",
               },
             ].map((tool) => (
               <div
                 key={tool.name}
                 className="rounded-3xl border border-slate-200 bg-slate-50 p-6"
               >
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 text-2xl text-white">
-                  {tool.icon}
+                <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-white">
+                  <Image
+                    src={tool.logo}
+                    alt={`${tool.name} logo`}
+                    width={48}
+                    height={48}
+                    className="h-12 w-12 object-contain"
+                  />
                 </div>
                 <p className="mt-5 text-lg font-semibold text-slate-950">
                   {tool.name}
                 </p>
                 <p className="mt-3 text-sm leading-6 text-slate-600">
                   {tool.detail}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-16 rounded-[2rem] bg-white p-8 shadow-sm shadow-slate-200/50">
+          <div className="flex flex-col gap-3">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
+              Experience
+            </p>
+            <h2 className="text-3xl font-semibold tracking-tight">
+              Work experience
+            </h2>
+            <p className="max-w-2xl text-slate-700 leading-8">
+              Hands-on site engineering combined with cost estimating and
+              quantity takeoff for construction projects.
+            </p>
+          </div>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            {experience.map((job) => (
+              <div
+                key={job.company}
+                className="rounded-3xl border border-slate-200 bg-slate-50 p-6"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="inline-flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl bg-white">
+                    <Image
+                      src={job.logo}
+                      alt={`${job.company} logo`}
+                      width={48}
+                      height={48}
+                      className="h-12 w-12 object-contain"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-lg font-semibold text-slate-950">
+                      {job.company}
+                    </p>
+                    <p className="text-sm font-medium text-slate-600">
+                      {job.role}
+                    </p>
+                  </div>
+                </div>
+                <p className="mt-5 text-sm leading-6 text-slate-600">
+                  {job.detail}
                 </p>
               </div>
             ))}
@@ -410,7 +484,7 @@ export default function Home() {
               </p>
               <div className="rounded-3xl bg-white p-5 text-sm text-slate-700 shadow-sm shadow-slate-200/50">
                 Email:{" "}
-                <span className="font-semibold">contact@jr-portfolio.com</span>
+                <span className="font-semibold">ochiajulito@gmail.com</span>
               </div>
               <div className="rounded-3xl bg-white p-5 text-sm text-slate-700 shadow-sm shadow-slate-200/50">
                 Portfolio purpose: Static estimate showcase for online
